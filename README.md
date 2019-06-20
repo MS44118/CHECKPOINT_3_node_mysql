@@ -41,17 +41,22 @@ Voici les user stories qui t'indiquent quelles routes tu vas devoir implémenter
 - en tant qu'utilisateur, je veux supprimer un morceau d'une playlist.
 - en tant qu'utilisateur, je veux modifier un morceau d'une playlist.
 
-Tu testeras l'api via Postman et chaque route devra **retourner un résultat au format JSON**.
+Tu devras réspecter les règles suivantes sur tes routes :
+- Le body des **requêtes HTTP** doit être au **format JSON**
+- Le body des **réponses HTTP** doit être au **format JSON**
+- Les requêtes HTTP de **lecture** doivent **renvoyer le(s) élément(s)** dans la réponse HTTP
+- Les requêtes HTTP de **création et modification** doivent **renvoyer l'élément créé/modifié** dans la réponse HTTP
+- Les requêtes HTTP de **suppréssion** ne doivent **pas renvoyer d'élément** dans la réponse HTTP
+
+**Respecte les principes de REST, notamment au niveau du nommage des différentes routes et des codes retour HTTP.**\
+- [http-status-codes](https://restfulapi.net/http-status-codes/)
+- [REST 5 règles](https://blog.nicolashachet.com/niveaux/confirme/larchitecture-rest-expliquee-en-5-regles/)
+
+Prends soin de regrouper les routes en utilisant le routeur Express et de tester l'api via Postman.
 
 Comme je suis sympa, je t'ai même préparé le schéma (MPD pour modèle physique de données) de la BDD.
 
 ![Schema BDD](https://wild31.com/wp-content/uploads/2018/12/checkpoint3-schema.png)
-
-**Respecte les principes de REST, notamment au niveau du nommage des différentes routes et des codes retour HTTP.**\
-[http-status-codes](https://restfulapi.net/http-status-codes/)\
-[REST 5 règles](https://blog.nicolashachet.com/niveaux/confirme/larchitecture-rest-expliquee-en-5-regles/)
-
-Prends soin de regrouper les routes en utilisant le routeur Express.
 
 ### Bonus
 
